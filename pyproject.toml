@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cellvet"
+version = "0.1.0"
+description = "Detects hidden-state bugs in Jupyter notebooks: out-of-order execution, undefined names, unreproducible cells."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "JaydenCJ" }]
+keywords = ["jupyter", "notebook", "linter", "reproducibility", "static-analysis", "pre-commit", "hidden-state"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+    "Framework :: Jupyter",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+cellvet = "cellvet.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/JaydenCJ/cellvet"
+Repository = "https://github.com/JaydenCJ/cellvet"
+Issues = "https://github.com/JaydenCJ/cellvet/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
