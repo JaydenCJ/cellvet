@@ -9,7 +9,7 @@ description = "Detects hidden-state bugs in Jupyter notebooks: out-of-order exec
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "JaydenCJ" }]
+authors = [{ name = "JaydenCJ", email = "aisingioro.kiyon@gmail.com" }]
 keywords = ["jupyter", "notebook", "linter", "reproducibility", "static-analysis", "pre-commit", "hidden-state"]
 classifiers = [
     "Development Status :: 3 - Alpha",
